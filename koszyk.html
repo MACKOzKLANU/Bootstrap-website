@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<style>
+  body {
+  background-color: lightblue;
+}
+  .tekst {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .sweatyswag {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+
+  }
+  .img{
+    max-height: 2vh;
+  }
+  .search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container input[type=text] {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  width: 20vh;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-container input[type=text]:focus {
+  width: 40vh;
+}
+
+.search-container button {
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+.bag{
+  height: 5vh;
+}
+/* Dodatkowy styl dla strony */
+
+.card {
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+  .carousel-item{
+    width: auto;
+    height: auto;
+  }
+  
+  footer {
+    margin-top: 50px;
+  }
+  .login-form {
+      width: 340px;
+      margin: 50px auto;
+      font-size: 15px;
+      background-color: #fff;
+    }
+    .login-form form {
+      margin-bottom: 15px;
+      background: #fff;
+      border: 1px solid #f2f2f2;
+      padding: 30px;
+    }
+    .login-form h2 {
+      margin: 0 0 15px;
+    }
+    .form-control, .btn {
+      min-height: 38px;
+      border-radius: 2px;
+    }
+    .btn {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .navbar-brand:hover{
+      color: #f46b30;
+    transition: 0.2s;
+
+  }
+  .btn-lock {
+  /* position: absolute; */
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  display: inline-block;
+  background: #ff5b5b;
+  width: 40px;
+  height: 52px;
+  box-sizing: border-box;
+  padding: 5px 0 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-lock svg {
+  fill: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-lock svg .bling {
+  stroke: #fff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 3;
+  stroke-dashoffset: 15;
+  transition: all 0.3s ease;
+}
+
+.btn-lock svg .lock {
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 36;
+  transition: all 0.4s ease;
+}
+
+.btn-lock svg .lockb {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  transform: rotate(8deg);
+  transform-origin: 14px 20px;
+  transition: all 0.2s ease;
+}
+
+#inpLock {
+  display: none;
+}
+
+#inpLock:checked + label {
+  background: #20cca5;
+}
+
+#inpLock:checked + label svg {
+  opacity: 1;
+}
+
+#inpLock:checked + label svg .bling {
+  animation: bling6132 0.3s linear forwards;
+  animation-delay: 0.2s;
+}
+
+#inpLock:checked + label svg .lock {
+  stroke-dasharray: 48;
+  animation: locked 0.3s linear forwards;
+}
+
+#inpLock:checked + label svg .lockb {
+  transform: rotate(0);
+  transform-origin: 14px 22px;
+}
+
+@keyframes bling6132 {
+  50% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 12;
+  }
+
+  100% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 9;
+  }
+}
+
+@keyframes locked {
+  50% {
+    transform: translateY(1px);
+  }
+}
+
+  
+</style>
+
+<body>
+  <div class="bg-black  ">
+
+
+    <a class="tekst text-light" href="https://www.instagram.com/_sweatyswag/">
+      <p class="tekst  ">Instagram @_sweatyswag</p>
+    </a>
+    
+    <div class="d-flex justify-content-between">
+      
+
+      <img class="sweatyswag" src="zdjecia/sweatyswag.gif">
+
+    </div>
+    <nav class="navbar bg-black ">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="koszyk.html"><img class="bag" src="zdjecia/bag.png"></a>
+
+        <form class="d-flex" role="search">
+          <div class="search-container">
+            <form>
+              <input type="text" placeholder="Search...">
+              <button type="submit" href="google.com">  <img class="img" src="zdjecia/search.png">
+                </button>
+            </form>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-md">
+        <a class="navbar-brand" href="index.html">Strona główna</a>
+        <a class="navbar-brand" href="koszulki.html">Koszulki</a>
+        <a class="navbar-brand" href="topy.html">Tank-topy</a>
+        <a class="navbar-brand" href="bluzy.html">Bluzy</a>
+        <a class="navbar-brand" href="dni.html">Dni treningowe</a>
+        <a class="navbar-brand" href="zamowienia.html">Śledzenie zamówień</a>
+
+
+
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+
+    <div class="login-form">
+        <form action="" method="post">
+          <h2 class="text-center">zaloguj się aby uzyskać dostęp do koszyka</h2>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+          </div>
+          <div class="form-group">
+            <input type="password" id="myInput" name="password" class="form-control" placeholder="Password" required="required">
+            <input id="inpLock" type="checkbox" onclick="myFunction()">
+<label class="btn-lock" for="inpLock">
+    <svg width="36" height="40" viewBox="0 0 36 40">
+        <path class="lockb" d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z"></path>
+        <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
+        <path class="bling" d="M29 20L31 22"></path>
+        <path class="bling" d="M31.5 15H34.5"></path>
+        <path class="bling" d="M29 10L31 8"></path>
+    </svg>
+</label>
+Pokaż hasło
+
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">zaloguj</button>
+            
+        <p>Nie masz konta ?</p>
+        <a href="zarejestruj.html" class="btn btn-primary btn-block">zarejestruj</a>
+
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+  </div>
+
+
+
+
+</div>
+</main>
+</div>
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">O nas</h5>
+        <p class=" card-text"><a class="tekst text-dark" href="regulamin.html">regulamin </a><a class="tekst text-dark" href="dane.html">dane firmy</a></p>
+        <a href="https://www.tiktok.com/@_sweatyswag" class="btn btn-primary"><img class="img" src="zdjecia/tiktok.png"></a>
+        <a href="https://www.instagram.com/_sweatyswag/" class="btn btn-primary"><img class="img" src="zdjecia/instagram.png"></a>
+
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <script>
+    function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+  </script>
+</body>
+
+</html>
